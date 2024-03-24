@@ -10,10 +10,12 @@
 
 I really enjoy watching movies and TV shows, and I recently watched `Dune 2` and `Gentlemen` on Netflix. It was fantastic! 
 
-For my final project as part of the Data Engineering Zoomcamp 2024 program, I have selected two datasets from Kaggle: 
+For my final project as part of the Data Engineering Zoomcamp 2024 program, I have selected two the TMDB (The Movie Database) datasets from Kaggle: 
 
-- The Full TMDb TV Shows Dataset for 2024 (CSV files `78,3 MB` 214452 rows, 19 columns)
-- The full TMDb Movies Dataset for 2024 (CSV files `463,1 MB` 214452 rows, 19 columns)
+- The Full TMDb TV Shows Dataset for 2024 
+- The full TMDb Movies Dataset for 2024
+
+These datasets provide comprehensive information about various movies and TV shows, including ratings, genres, cast, and more.
 
 I will be focusing my analysis on these platforms: 
 
@@ -48,16 +50,21 @@ The selected technologies for this project include:
 
 ![Architecture diagram](/recreate_project/static/data_pipeline_architecture_050.png)
 
-![Architecture diagram]()
-https://app.diagrams.net/#G1f1IagbaDTfu0mBtzT58lgi98QO9US2c5
 
 ## Data Source
 
 Dataset was taken from Kaggle:
 
  - [The Full TMDb TV Shows Dataset for 2024](https://www.kaggle.com/datasets/asaniczka/full-tmdb-tv-shows-dataset-2023-150k-shows)
+    - **File Type:** `CSV`
+    - **File Size:** `78.3` MB
+    - **Rows:** `166,383`
+    - **Columns:** `29`
  - [The Full TMDb TV Movies Dataset for 2024](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies)
-
+    - **File Type:** `CSV`
+    - **File Size:** `463.1` MB
+    - **Rows:** `1,011,520`
+    - **Columns:** `23`
 
 ## Reproduce the project
 
