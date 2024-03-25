@@ -1,0 +1,256 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_loaders/netflix_shows_load.py
+  downstream_blocks:
+  - netflix_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: netflix_shows_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: netflix_shows_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/netflix_exporter.py
+  downstream_blocks:
+  - staging_models
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: netflix_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - netflix_shows_load
+  uuid: netflix_exporter
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - amazon_prime_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: amazon_prime_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: amazon_prime_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - staging_models
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: amazon_prime_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - amazon_prime_load
+  uuid: amazon_prime_exporter
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - disney_plus_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: disney_plus_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: disney_plus_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - staging_models
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: disney_plus_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - disney_plus_load
+  uuid: disney_plus_exporter
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - hulu_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hulu_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: hulu_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - staging_models
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: hulu_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - hulu_load
+  uuid: hulu_exporter
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dbt:
+      command: run
+    dbt_profile_target: dev
+    dbt_project_name: dbt/movies_tv_shows_dbt
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_source:
+      path: dbts/staging_models.yaml
+    use_raw_sql: false
+  downstream_blocks:
+  - core_models
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: staging_models
+  retry_config: null
+  status: updated
+  timeout: null
+  type: dbt
+  upstream_blocks:
+  - hulu_exporter
+  - disney_plus_exporter
+  - disney_plus_exporter
+  - amazon_prime_exporter
+  - netflix_exporter
+  uuid: staging_models
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    dbt:
+      command: run
+    dbt_profile_target: dev
+    dbt_project_name: dbt/movies_tv_shows_dbt
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_source:
+      path: dbts/wild_crystal.yaml
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: core_models
+  retry_config: null
+  status: executed
+  timeout: null
+  type: dbt
+  upstream_blocks:
+  - staging_models
+  uuid: core_models
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: null
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions:
+  great_expectations:
+    blocks:
+    - all_upstream_blocks_executed: true
+      color: null
+      configuration: {}
+      downstream_blocks: []
+      executor_config: null
+      executor_type: local_python
+      has_callback: false
+      language: python
+      name: column_list
+      retry_config: null
+      status: not_executed
+      timeout: null
+      type: extension
+      upstream_blocks:
+      - amazon_prime_load
+      - disney_plus_load
+      - hulu_load
+      - netflix_shows_load
+      uuid: column_list
+    - all_upstream_blocks_executed: true
+      color: null
+      configuration: {}
+      downstream_blocks: []
+      executor_config: null
+      executor_type: local_python
+      has_callback: false
+      language: python
+      name: row_data
+      retry_config: null
+      status: not_executed
+      timeout: null
+      type: extension
+      upstream_blocks:
+      - netflix_shows_load
+      - amazon_prime_load
+      - disney_plus_load
+      - hulu_load
+      uuid: row_data
+name: simple_load_datasets
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: simple_load_datasets
+variables_dir: /home/src/mage_data/movies_tv_shows
+widgets: []

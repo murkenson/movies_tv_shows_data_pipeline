@@ -1,0 +1,70 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_movies_tv_shows_dbt
+  schema: movies_tv_shows_8c93fb215204
+  tables:
+  - description: Dataframe for block `hulu_exporter` of the `movies_tv_shows_pipeline`
+      mage pipeline.
+    identifier: mage_movies_tv_shows_pipeline_hulu_exporter
+    meta:
+      block_uuid: hulu_exporter
+      pipeline_uuid: movies_tv_shows_pipeline
+    name: movies_tv_shows_pipeline_hulu_exporter
+  - description: Dataframe for block `disney_plus_exporter` of the `movies_tv_shows_pipeline`
+      mage pipeline.
+    identifier: mage_movies_tv_shows_pipeline_disney_plus_exporter
+    meta:
+      block_uuid: disney_plus_exporter
+      pipeline_uuid: movies_tv_shows_pipeline
+    name: movies_tv_shows_pipeline_disney_plus_exporter
+  - description: Dataframe for block `amazon_prime_exporter` of the `movies_tv_shows_pipeline`
+      mage pipeline.
+    identifier: mage_movies_tv_shows_pipeline_amazon_prime_exporter
+    meta:
+      block_uuid: amazon_prime_exporter
+      pipeline_uuid: movies_tv_shows_pipeline
+    name: movies_tv_shows_pipeline_amazon_prime_exporter
+  - description: Dataframe for block `netflix_exporter` of the `movies_tv_shows_pipeline`
+      mage pipeline.
+    identifier: mage_movies_tv_shows_pipeline_netflix_exporter
+    meta:
+      block_uuid: netflix_exporter
+      pipeline_uuid: movies_tv_shows_pipeline
+    name: movies_tv_shows_pipeline_netflix_exporter
+  - description: Dataframe for block `hulu_exporter` of the `simple_load_datasets`
+      mage pipeline.
+    identifier: mage_simple_load_datasets_hulu_exporter
+    meta:
+      block_uuid: hulu_exporter
+      pipeline_uuid: simple_load_datasets
+    name: simple_load_datasets_hulu_exporter
+  - description: Dataframe for block `netflix_exporter` of the `simple_load_datasets`
+      mage pipeline.
+    identifier: mage_simple_load_datasets_netflix_exporter
+    meta:
+      block_uuid: netflix_exporter
+      pipeline_uuid: simple_load_datasets
+    name: simple_load_datasets_netflix_exporter
+  - description: Dataframe for block `amazon_prime_exporter` of the `simple_load_datasets`
+      mage pipeline.
+    identifier: mage_simple_load_datasets_amazon_prime_exporter
+    meta:
+      block_uuid: amazon_prime_exporter
+      pipeline_uuid: simple_load_datasets
+    name: simple_load_datasets_amazon_prime_exporter
+  - description: Dataframe for block `disney_plus_exporter` of the `simple_load_datasets`
+      mage pipeline.
+    identifier: mage_simple_load_datasets_disney_plus_exporter
+    meta:
+      block_uuid: disney_plus_exporter
+      pipeline_uuid: simple_load_datasets
+    name: simple_load_datasets_disney_plus_exporter
+  - description: Dataframe for block `dynamic_exporter_to_gcs` of the `pipeline_for_movies_tv_shows_datasets_from_kaggle`
+      mage pipeline.
+    identifier: mage_pipeline_for_movies_tv_shows_datasets_from_kaggle_dynamic_exporter_to_gcs
+    meta:
+      block_uuid: dynamic_exporter_to_gcs
+      pipeline_uuid: pipeline_for_movies_tv_shows_datasets_from_kaggle
+    name: pipeline_for_movies_tv_shows_datasets_from_kaggle_dynamic_exporter_to_gcs
+version: 2

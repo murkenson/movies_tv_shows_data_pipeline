@@ -1,0 +1,17 @@
+config:
+  use_colors: true
+  printer_width: 200
+
+movies_tv_shows_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      project: "{{ env_var('GCLOUD_PROJECT_NAME') }}" 
+      dataset: movies_tv_shows_8c93fb215204
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive

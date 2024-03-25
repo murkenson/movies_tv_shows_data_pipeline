@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: "{{ env_var('GCLOUD_PROJECT_NAME') }}"
+    schema: "{{ env_var('BIGQUERY_DATASET') }}"
+
+    tables:
+      - name: external_table_tmdb-movies-dataset-2023-930k-movies
+      - name: external_table_full-tmdb-tv-shows-dataset-2023-150k-shows
