@@ -22,7 +22,8 @@ with
                 else null
             end as platform_nam,
             vote_count as platform_vote_count,
-            vote_average as platform_vote_average
+            vote_average as platform_vote_average,
+            release_date as platform_release_date
         from {{ ref("stg_movies") }}
 
     ),
@@ -45,7 +46,8 @@ with
                 else null
             end as platform_name,
             vote_count as platform_vote_count,
-            vote_average as platform_vote_average
+            vote_average as platform_vote_average,
+            release_date as first_air_date
         from {{ ref("stg_tv_shows") }}
 
     )
