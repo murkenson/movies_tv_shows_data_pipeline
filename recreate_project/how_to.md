@@ -192,15 +192,16 @@ Assuming you are using Linux AMD64 run the following commands to install Terrafo
 
 
 ```bash
-cd final_project \
+cd final_project/recreate_project \
 && chmod +x package_install.sh \
+&& chmod +x teardown.sh \
 && ./package_install.sh
 ```
 
 
 >Activate the environment variable.
 ```bash
-source  .bashrc
+source .bashrc
 ```
 
 > [!IMPORTANT]
@@ -417,7 +418,7 @@ docker exec -it final_project-magic-1 mage run movies_tv_shows movies_tv_shows_p
 Delete infra after your work, to avoid costs on any running services
 ```bash
 cd ~/final_project/terraform/ \
-&& terraform destroy --var="project=project=de-final-project-416207" -auto-approve
+&& terraform destroy --var="project=project=GCLOUD_PROJECT_NAME" -auto-approve
 ```
 
 

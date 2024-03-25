@@ -29,12 +29,11 @@ I will be focusing my analysis on these platforms:
 
 - Understanding the content is available in different countries
 - Identifying similar content through matching text-based features
-- Network analysis of Actors / Directors and finding interesting insights
-- Does Hulu have a greater focus on TV shows than movies in recent years?
+
 
 ## Dashboard
 
-You can view the dashboard [here]()
+You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1cb87-8bd6-4b62-8946-3ea0e79a7ea6)
 
 ## Technologies
 
