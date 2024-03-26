@@ -27,13 +27,20 @@ I will be focusing my analysis on these platforms:
 
 ### Problem description
 
-- Understanding the content is available in different countries
-- Identifying similar content through matching text-based features
 
+1. **Platform Content Overview**: Analysis of TV shows and movies available on each platform.
+2. **Decadal Distribution of Releases**: Examination of the distribution of TV shows and movies by their release years over the last ten years, categorized by platform.
+3. **Genre Dominance by Platform**: Identification of the top five prevalent genres on each platform.
+4. **Episodic Excellence**: Ranking the top 10 TV shows on each platform based on the number of episodes.
+5. **Film Length Leaders**: Ranking the top 10 movies on each platform by their runtime duration.
 
 ## Dashboard
 
-You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1cb87-8bd6-4b62-8946-3ea0e79a7ea6)
+You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1cb87-8bd6-4b62-8946-3ea0e79a7ea6).
+
+![](/recreate_project/static/060_lookerstudio_report.gif)
+
+
 
 ## Technologies
 

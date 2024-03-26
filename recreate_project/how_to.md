@@ -407,15 +407,9 @@ cd ~/final_project \
 ### Running pipeline
 
 
->To run the pipeline from terminal
-```bash
-docker exec -it final_project-magic-1 bash mage run movies_tv_shows pipeline_for_movies_tv_shows_datasets_from_kaggle	
-```
-
-
 >To run the pipeline from web: 
 
-1. Access the Mage-AI web interface at http://localhost:6789/. 
+1. Access the Mage AI web interface at http://localhost:6789/. 
 2. Click on the `pipeline_for_movies_tv_shows_datasets_from_kaggle` pipeline. 
 3. Click on `Run Pipeline Now` and `Run Now`. 
 4. Enter the trigger and check the pipeline's results.
