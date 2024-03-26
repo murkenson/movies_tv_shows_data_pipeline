@@ -6,7 +6,7 @@
 
 ### Movies and TV shows on streaming platforms 🎥🍿
 
-![Movies and TV shows](/recreate_project/static/project_logo_040.svg)
+![Movies and TV shows](/recreate_project/static/040_project_logo.svg)
 
 I really enjoy watching movies and TV shows, and I recently watched `Dune 2` and `Gentlemen` on Netflix. It was fantastic! 
 
@@ -47,7 +47,7 @@ The selected technologies for this project include:
 - **Transforming Data:** DBT (data build tool)
 - **Data Visualization:** Looker Studio
 
-![Architecture diagram](/recreate_project/static/data_pipeline_architecture_050.png)
+![Architecture diagram](/recreate_project/static/050_data_pipeline_architecture.png)
 
 
 ## Data Source

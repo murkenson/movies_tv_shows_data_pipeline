@@ -34,25 +34,25 @@ You will also need to activate the following APIs:
 <details>
 <summary>You should see this.</summary>
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_001.png)
+![Goocle Cloud](/recreate_project/static/001_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_002.png)
+![Goocle Cloud](/recreate_project/static/002_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_003.png)
+![Goocle Cloud](/recreate_project/static/003_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_004.png)
+![Goocle Cloud](/recreate_project/static/004_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_005.png)
+![Goocle Cloud](/recreate_project/static/005_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_006.png)
+![Goocle Cloud](/recreate_project/static/006_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_007.png)
+![Goocle Cloud](/recreate_project/static/007_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_008.png)
+![Goocle Cloud](/recreate_project/static/008_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_009.png)
+![Goocle Cloud](/recreate_project/static/009_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_010.png)
+![Goocle Cloud](/recreate_project/static/010_google_cloud_setup.png)
 
 </details>
 </br>
@@ -98,11 +98,11 @@ Respond to the confirmation prompt with a `yes`.
 <details>
 <summary>You should see this.</summary>
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_014.png)
+![Goocle Cloud](/recreate_project/static/014_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_015.png)
+![Goocle Cloud](/recreate_project/static/015_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_016.png)
+![Goocle Cloud](/recreate_project/static/016_google_cloud_setup.png)
 
 </details>
 </br>
@@ -117,7 +117,7 @@ If you already have an account, click on `CREATE NEW TOKEN`. If you don't have a
 <details>
 <summary>You should see this.</summary>
 
-![Kaggle Account](/recreate_project/static/kaggle_setup_010.png)
+![Kaggle Account](/recreate_project/static/020_kaggle_setup.png)
 
 </details>
 </br>
@@ -144,11 +144,11 @@ This token should be added to the `.env` file in the next step.
 <details>
 <summary>You should see this.</summary>
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_011.png)
+![Goocle Cloud](/recreate_project/static/011_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_012.png)
+![Goocle Cloud](/recreate_project/static/012_google_cloud_setup.png)
 
-![Goocle Cloud](/recreate_project/static/google_cloud_setup_013.png)
+![Goocle Cloud](/recreate_project/static/013_google_cloud_setup.png)
 
 
 
@@ -423,7 +423,7 @@ docker exec -it final_project-magic-1 bash mage run movies_tv_shows pipeline_for
 
 >You should see this
 
-![](/recreate_project/static/mage_pipeline_ru_032.gif)
+![](/recreate_project/static/032_mage_pipeline_ru.gif)
 
 
 
