@@ -25,7 +25,6 @@ mkdir soft \
 && cd ~ \
 && echo 'export PATH="${HOME}/soft:${PATH}"' >> .bashrc \
 
-docker-compose --version
 
 echo "=============================================================================="
 echo "---------------------- Docker Compose is installed! ----------------------"

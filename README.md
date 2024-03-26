@@ -41,6 +41,7 @@ You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1
 ![](/recreate_project/static/060_lookerstudio_report.gif)
 
 
+Also it is saved as a static PDF here: 
 
 ## Technologies
 

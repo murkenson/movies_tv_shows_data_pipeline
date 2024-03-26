@@ -201,7 +201,7 @@ cd final_project/recreate_project \
 
 >Activate the environment variable.
 ```bash
-source .bashrc
+cd ~ && source .bashrc
 ```
 
 > [!IMPORTANT]
@@ -382,27 +382,33 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 
 
-
-
-
 ### Installing Mage AI
 
 
-> OPEN `dev.env` and add information about your Kaggle API token and gcloud project ID
+> OPEN `dev.env` 
+
+```bash
+cd ~/final_project && nano dev.env
+```
+
+>Add information about your Kaggle API token and gcloud project ID
 ```
 KAGGLE_USERNAME=<FILL_KAGGLE_USERNAME>
 KAGGLE_KEY=<FILL_KAGGLE_KEY>
 GCLOUD_PROJECT_NAME=<FILL_GCLOUD_PROJECT_NAME>
 ```
 
+
 >Starts the Docker containers in detached mode after copying the contents of dev.env to .env and building the Docker images based on the docker-compose.yml.
 ```bash
 cd ~/final_project \
 && cp dev.env .env \
 && docker-compose build \
-&& docker-compose up -d 
-
+&& docker-compose up -d \
+&& docker exec -it final_project-magic-1 sh -c "cd /home/src/movies_tv_shows/dbt/movies_tv_shows_dbt && dbt deps"
 ```
+
+
 
 ### Running pipeline
 
@@ -420,10 +426,13 @@ cd ~/final_project \
 ![](/recreate_project/static/032_mage_pipeline_ru.gif)
 
 
+### When you are done
 
 
 >[!IMPORTANT]
-Delete infra after your work, to avoid costs on any running services
+This step is important because the project uses resource-intensive services that can end up costing you money if you do not shut them down.
+
+
 ```bash
 cd ~/final_project/terraform/ \
 && terraform destroy --var="project=project=GCLOUD_PROJECT_NAME" -auto-approve
@@ -538,5 +547,5 @@ Destroy complete! Resources: 2 destroyed.
 >For stopping container 
 
 ```bash
-./teardown.sh
+cd ~/final_project/recreate_project && ./teardown.sh
 ```
