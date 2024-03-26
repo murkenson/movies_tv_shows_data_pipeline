@@ -20,10 +20,13 @@ with
                 when homepage like '%hulu%'
                 then 'Hulu'
                 else null
-            end as platform_nam,
+            end as platform_name,
             vote_count as platform_vote_count,
             vote_average as platform_vote_average,
-            release_date as platform_release_date
+            release_date as platform_release_date,
+            runtime as platform_movie_runtime,
+            NULL as platform_show_number_of_seasons,
+            NULL as platform_show_number_of_episodes
         from {{ ref("stg_movies") }}
 
     ),
@@ -47,7 +50,12 @@ with
             end as platform_name,
             vote_count as platform_vote_count,
             vote_average as platform_vote_average,
-            release_date as first_air_date
+            first_air_date as platform_release_date,
+            NULL as platform_movie_runtime,
+            number_of_seasons as platform_show_number_of_seasons,
+            number_of_episodes as platform_show_number_of_episodes
+
+
         from {{ ref("stg_tv_shows") }}
 
     )
@@ -56,7 +64,6 @@ from movies_data
 union all
 select *
 from tv_shows_data
-limit 1000
 
 
 {{ dbt_utils.log_info("The transformation for the tables is over") }}

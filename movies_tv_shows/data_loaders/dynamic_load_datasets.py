@@ -69,10 +69,7 @@ def load_data(datasets, *args, **kwargs):
 
 
 
-@test
-def test_data_exists(df_new, *args) -> None:
-    if not df_new.empty:
-        print("DataFrame is not empty")
+
 
 """
 @test

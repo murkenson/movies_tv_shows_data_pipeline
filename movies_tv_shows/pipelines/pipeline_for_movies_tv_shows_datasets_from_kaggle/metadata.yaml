@@ -52,13 +52,13 @@ blocks:
   language: python
   name: dynamic_exporter_to_gcs
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
   - dynamic_load_datasets
   uuid: dynamic_exporter_to_gcs
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     dbt: {}
@@ -77,13 +77,13 @@ blocks:
   language: yaml
   name: staging_models
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: dbt
   upstream_blocks:
   - dynamic_exporter_to_gcs
   uuid: staging_models
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     dbt: {}
@@ -94,7 +94,8 @@ blocks:
     file_source:
       path: dbts/core_models.yaml
     use_raw_sql: false
-  downstream_blocks: []
+  downstream_blocks:
+  - cleanup_after_loading
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -107,6 +108,22 @@ blocks:
   upstream_blocks:
   - staging_models
   uuid: core_models
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: cleanup_after_loading
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - core_models
+  uuid: cleanup_after_loading
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

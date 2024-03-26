@@ -13,7 +13,7 @@
 }}
 
 
-{% set filter_value = "netflix|hulu|amazom|disney" %}
+{% set filter_value = "netflix|hulu|amazon|disney" %}
 
 
 select 
