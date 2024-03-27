@@ -133,13 +133,13 @@ This token should be added to the `.env` file in the next step.
 1. Create a new instance:
     * Choose name `final-project`
     * Pick region `us-central1-c`. You can check out the regions [in this link](https://cloud.google.com/about/locations).
-        > [!IMPORTANT]
-        Make sure that you use the same region for all of your Google Cloud components.
     * Pick a _E2 series_ instance. A _e2-standard-4_ instance is recommended (4 vCPUs, 8GB RAM)
     * Change the boot disk to _Ubuntu_. The _Ubuntu 20.04 LTS_ version is recommended. Also pick at least 20GB of storage.
     * Leave all other settings on their default value and click on _Create_.
 
 
+> [!IMPORTANT]
+Make sure that you use the same region for all of your Google Cloud components
 
 <details>
 <summary>You should see this.</summary>
@@ -162,7 +162,7 @@ This token should be added to the `.env` file in the next step.
 
 >Downloading project from github
 ```bash
-git clone https://github.com/murkenson/movies_tv-shows-data-pipeline final_project
+git clone https://github.com/murkenson/movies_tv_shows_data_pipeline final_project
 ```
 
 
