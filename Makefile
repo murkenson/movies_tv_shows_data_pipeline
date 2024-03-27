@@ -9,13 +9,13 @@ config:
 	echo 'export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/credentials.json' >> ~/.bashrc \
 	&& . ~/.bashrc
 
-recreating_project:
+install_pack:
 	cd $(FINAL_PROJECT_DIR)/recreate_project && \
 	chmod +x package_install.sh && \
 	chmod +x teardown.sh && \
 	./package_install.sh
 
-build_and_run_docker:
+build_run_docker:
 	cd $(FINAL_PROJECT_DIR) 
 	cp dev.env .env 
 	docker-compose build 

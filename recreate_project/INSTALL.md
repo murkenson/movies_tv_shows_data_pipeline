@@ -169,7 +169,7 @@ sudo apt update && sudo apt install make -y
 
 >Downloading project from github
 ```bash
-git clone https://github.com/murkenson/movies_tv_shows_data_pipeline final_project
+git clone https://github.com/murkenson/movies_tv_shows_data_pipeline final_project && cd final_project
 ```
 
 
@@ -193,7 +193,7 @@ Assuming you are using Linux AMD64 run the following commands to install Terrafo
 
 
 ```bash
-make recreating_project
+make install_pack
 ```
 
 
@@ -210,9 +210,14 @@ Log out and then log back in to have your group membership re-evaluated.
 
 >To initiate, plan, and apply the necessary infrastructure, please execute the following Terraform commands, adjusting as needed. Please provide the ID of your project.
 ```bash
-cd ~/final_project/terraform/ 
-terraform init
+cd ~/final_project/terraform/  && terraform init
+```
+
+```bash
 terraform plan  --var="project=GCLOUD_PROJECT_NAME"
+```
+
+```bash
 terraform apply --var="project=GCLOUD_PROJECT_NAME"  -auto-approve
 ```
 
@@ -399,7 +404,7 @@ GCLOUD_PROJECT_NAME=<FILL_GCLOUD_PROJECT_NAME>
 
 >Starts the Docker containers in detached mode after copying the contents of dev.env to .env and building the Docker images based on the docker-compose.yml.
 ```bash
-make build_and_run_docker
+cd ~/final_project && make build_run_docker
 ```
 
 
@@ -540,5 +545,5 @@ Destroy complete! Resources: 2 destroyed.
 >For stopping container 
 
 ```bash
-make teardown
+cd ~/final_project && make teardown
 ```
