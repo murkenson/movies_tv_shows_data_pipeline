@@ -97,9 +97,7 @@ Recreating the project is a simple process and should only take about 15 minutes
 ## Future Improvements
 
 - Create tests for all code and sql
-- Move other commands to Make-file to make a reproducibility in less commands
 - Implement CI/CD
-- Add API for extracting data from web 
 
 ## Credits
 

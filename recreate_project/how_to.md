@@ -199,7 +199,7 @@ make recreate_project
 
 >Activate the environment variable.
 ```bash
-cd ~ && source .bashrc
+source ~/.bashrc
 ```
 
 > [!IMPORTANT]
@@ -386,7 +386,7 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 > OPEN `dev.env` 
 
 ```bash
-cd ~/final_project && nano dev.env
+nano ~/final_project/dev.env
 ```
 
 >Add information about your Kaggle API token and gcloud project ID
@@ -424,8 +424,7 @@ make build_and_run_docker
 
 
 >[!IMPORTANT]
-This step is important because the project uses resource-intensive services that can end up costing you money if you do not shut them down.
-
+This step is important because the project uses resource-intensive services that can end up costing you money if you do not shut them down. Please provide the ID of your project.
 
 ```bash
 cd ~/final_project/terraform/ \
