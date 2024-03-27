@@ -157,8 +157,15 @@ Make sure that you use the same region for all of your Google Cloud components
 
 ## STEP 5: Install packages on the Virtual Machine
 
-### Download the github project
 
+## Instal make 
+
+>To install the `make` in the Ubuntu Terminal, use the following command:
+```bash
+sudo apt update && sudo apt install make -y
+```
+
+### Download the github project
 
 >Downloading project from github
 ```bash
@@ -172,18 +179,12 @@ Let the [environment variable point to your GCP key](https://cloud.google.com/do
 
 >Establish a `.gc/` directory, generate a `credentials.json` file, and insert the Service Account credentials within it.
 ```bash
-cd ~ \
-&& mkdir .gc \
-&& cd .gc \
-&& touch credentials.json \
-&& nano credentials.json
+make setup
 ```
 
 >Activate the environment variable.
 ```bash
-cd ~\
-&&  echo 'export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/credentials.json' >> .bashrc \
-&& source .bashrc 
+make config
 ```
 
 ### Isntall Docker, Docker compose & Terraform
@@ -192,10 +193,7 @@ Assuming you are using Linux AMD64 run the following commands to install Terrafo
 
 
 ```bash
-cd final_project/recreate_project \
-&& chmod +x package_install.sh \
-&& chmod +x teardown.sh \
-&& ./package_install.sh
+make recreate_project
 ```
 
 
@@ -401,11 +399,7 @@ GCLOUD_PROJECT_NAME=<FILL_GCLOUD_PROJECT_NAME>
 
 >Starts the Docker containers in detached mode after copying the contents of dev.env to .env and building the Docker images based on the docker-compose.yml.
 ```bash
-cd ~/final_project \
-&& cp dev.env .env \
-&& docker-compose build \
-&& docker-compose up -d \
-&& docker exec -it final_project-magic-1 sh -c "cd /home/src/movies_tv_shows/dbt/movies_tv_shows_dbt && dbt deps"
+make build_and_run_docker
 ```
 
 
@@ -547,5 +541,5 @@ Destroy complete! Resources: 2 destroyed.
 >For stopping container 
 
 ```bash
-cd ~/final_project/recreate_project && ./teardown.sh
+make teardown
 ```
