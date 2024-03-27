@@ -130,7 +130,8 @@ concurrency_config: {}
 conditionals: []
 created_at: '2024-03-16 09:41:35.110245+00:00'
 data_integration: null
-description: null
+description: ' This pipeline was created as part of the final project for the Data
+  Engineer Zoomcamp 2024'
 executor_config: {}
 executor_count: 1
 executor_type: null
