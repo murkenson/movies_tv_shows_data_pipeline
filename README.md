@@ -24,7 +24,7 @@
 
 I really enjoy watching movies and TV shows, and I recently watched `Dune 2` and `Gentlemen` on Netflix. It was fantastic! 
 
-For my final project as part of the Data Engineering Zoomcamp 2024 program, I have selected two the TMDB (The Movie Database) datasets from Kaggle: 
+For my final project as part of the Data Engineering Zoomcamp 2024 program, I have selected two TMDB (The Movie Database) datasets from Kaggle: 
 
 - The Full TMDb TV Shows Dataset for 2024 
 - The full TMDb Movies Dataset for 2024
@@ -55,7 +55,7 @@ You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1
 ![](/recreate_project/static/060_lookerstudio_report.gif)
 
 
-Also it is saved as a static PDF here: 
+Also it is saved as a static PDF [here](/recreate_project/static/061_lookerstudio_report.pdf).
 
 
 ## Technologies
