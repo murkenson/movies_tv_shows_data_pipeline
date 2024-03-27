@@ -72,6 +72,8 @@ The selected technologies for this project include:
 
 ![Architecture diagram](/recreate_project/static/050_data_pipeline_architecture.png)
 
+> [!NOTE]
+ For Partitioning, tables larger than 100 Gb are chosen, and for Clustering tables larger than 10 Gb are chosen. The reason for filtering out the smaller tables is because the optimization benefit is smaller and less predictable. Therefore, this project does not include these smaller tables, as the volume of data we have is relatively small. Here is the [source](https://cloud.google.com/blog/products/data-analytics/new-bigquery-partitioning-and-clustering-recommendations).
 
 ## Data Source
 
@@ -92,7 +94,7 @@ Dataset was taken from Kaggle:
 
 >How to Recreate the Project? 
 
-Recreating the project is a simple process and should only take about 15 minutes. You can find a detailed tutorial on how to do this [here](/recreate_project/how_to.md).
+Recreating the project is a simple process and should only take about 15 minutes. You can find a detailed tutorial on how to do this [here](/recreate_project/INSTALL.md).
 
 ## Future Improvements
 
