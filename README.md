@@ -1,10 +1,24 @@
 # This is the final project for [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) by [DataTalks Club](https://datatalks.club)  🚀😤
 
 
+## Table of Contents
+
+- [Introduction](#introduction)
+   - [Overview](#overview)
+   - [Problem description](#problem-description)
+- [Technologies](#technologies)
+- [Data Source](#data-source)
+- [Reproducability](#reproducability)
+- [Future Improvements](#future-improvements)
+- [Credits](#credits)
+
+
+
 ## Introduction
 
+### Overview
 
-### Movies and TV shows on streaming platforms 🎥🍿
+**Movies and TV shows on streaming platforms 🎥🍿**
 
 ![Movies and TV shows](/recreate_project/static/040_project_logo.svg)
 
@@ -43,6 +57,7 @@ You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1
 
 Also it is saved as a static PDF here: 
 
+
 ## Technologies
 
 The selected technologies for this project include:
@@ -73,7 +88,7 @@ Dataset was taken from Kaggle:
     - **Rows:** `1,011,520`
     - **Columns:** `23`
 
-## Reproduce the project
+## Reproducability
 
 >How to Recreate the Project? 
 
