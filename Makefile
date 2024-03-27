@@ -6,10 +6,10 @@ setup:
 	nano ~/.gc/credentials.json
 	
 config:
-	echo 'export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/credentials.json' >> ~/.bashrc
-	source ~/.bashrc
+	echo 'export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/credentials.json' >> ~/.bashrc \
+	&& . ~/.bashrc
 
-recreate_project:
+recreating_project:
 	cd $(FINAL_PROJECT_DIR)/recreate_project && \
 	chmod +x package_install.sh && \
 	chmod +x teardown.sh && \

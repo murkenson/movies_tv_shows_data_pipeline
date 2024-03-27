@@ -193,7 +193,7 @@ Assuming you are using Linux AMD64 run the following commands to install Terrafo
 
 
 ```bash
-make recreate_project
+make recreating_project
 ```
 
 
