@@ -4,6 +4,7 @@ import zipfile
 from pathlib import Path
 import pandas as pd
 from pathlib import Path
+from os import getenv
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 if "data_loader" not in globals():
@@ -22,7 +23,7 @@ def load_data(datasets, *args, **kwargs):
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
 
-    BASE_DIR = "data/"
+    BASE_DIR =  getenv("BASE_DIR_FOR_LOAD_DATA")
     DATASET_NAME = datasets["name"]
     CREATED_BY = datasets["created_by"]
     
