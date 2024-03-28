@@ -99,7 +99,6 @@ Recreating the project is a simple process and should only take about 15 minutes
 ## Future Improvements
 
 - Create tests for all code and sql
-- Implement CI/CD
 
 ## Credits
 

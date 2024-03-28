@@ -15,9 +15,13 @@ install_pack:
 	chmod +x teardown.sh && \
 	./package_install.sh
 
+edit_env:
+	cd $(FINAL_PROJECT_DIR) && \
+	mv dev.env .env  && \
+	nano .env
+
 build_run_docker:
 	cd $(FINAL_PROJECT_DIR) 
-	cp dev.env .env 
 	docker-compose build 
 	docker-compose up -d 
 	docker exec -it final_project-magic-1 sh -c "cd /home/src/movies_tv_shows/dbt/movies_tv_shows_dbt && dbt deps"

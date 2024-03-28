@@ -133,7 +133,7 @@ This token should be added to the `.env` file in the next step.
 1. Create a new instance:
     * Choose name `final-project`
     * Pick region `us-central1-c`. You can check out the regions [in this link](https://cloud.google.com/about/locations).
-    * Pick a _E2 series_ instance. A _e2-standard-4_ instance is recommended (4 vCPUs, 8GB RAM)
+    * Pick a _E2 series_ instance. A _e2-standard-4_ instance is recommended (2 vCPUs, 4GB RAM)
     * Change the boot disk to _Ubuntu_. The _Ubuntu 20.04 LTS_ version is recommended. Also pick at least 20GB of storage.
     * Leave all other settings on their default value and click on _Create_.
 
@@ -388,10 +388,10 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ### Installing Mage AI
 
 
-> OPEN `dev.env` 
+> RUN command to open `.env` file
 
 ```bash
-nano ~/final_project/dev.env
+make edit_env
 ```
 
 >Add information about your Kaggle API token and gcloud project ID
