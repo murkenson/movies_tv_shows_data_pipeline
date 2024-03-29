@@ -422,7 +422,25 @@ cd ~/final_project && make build_run_docker
 
 >You should see this
 
-![](/recreate_project/static/032_mage_pipeline_ru.gif)
+![](/recreate_project/static/033_mage_pipeline_start.gif)
+
+![](/recreate_project/static/032_mage_pipeline.gif)
+
+
+### Checking uploaded tables
+
+Go to BigQuery, open `movies_tv_shows_8c93fb215204` dataset
+
+
+Connect Looker studio to BigQuery and perform visualizations.
+
+<details>
+<summary>You should see this.</summary>
+
+![BigQuery](/recreate_project/static/070_bigquery_tables.png)
+
+</details>
+</br>
 
 
 ### When you are done
