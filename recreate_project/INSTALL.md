@@ -177,7 +177,7 @@ git clone https://github.com/murkenson/movies_tv_shows_data_pipeline final_proje
 
 Let the [environment variable point to your GCP key](https://cloud.google.com/docs/authentication/application-default-credentials#GAC), authenticate it and refresh the session token
 
->Establish a `.gc/` directory, generate a `credentials.json` file, and insert the Service Account credentials within it.
+>Paste your the Service Account credentials
 ```bash
 make setup
 ```
@@ -191,13 +191,13 @@ make config
 
 Assuming you are using Linux AMD64 run the following commands to install Terraform - if you are using a different OS please choose the correct version here and exchange the download [link](https://developer.hashicorp.com/terraform/install#linux) and zip file name
 
-
+>Run commnad to install packages
 ```bash
 make install_pack
 ```
 
 
->Activate the environment variable.
+>Activate the environment variable
 ```bash
 source ~/.bashrc
 ```
@@ -389,9 +389,8 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 
 > RUN command to open `.env` file
-
 ```bash
-make edit_env
+cd ~/final_project/ && make edit_env
 ```
 
 >Add information about your Kaggle API token and gcloud project ID

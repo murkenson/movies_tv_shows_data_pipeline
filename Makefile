@@ -1,5 +1,6 @@
 FINAL_PROJECT_DIR := ~/final_project
 
+# Establish a `.gc/` directory, generate a `credentials.json` file, and insert the Service Account credentials within it.
 setup:
 	mkdir -p ~/.gc
 	touch ~/.gc/credentials.json
