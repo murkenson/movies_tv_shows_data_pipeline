@@ -78,14 +78,14 @@ ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
 4) Click on the **ADD SSH KEY** button.
 3) Paste the public key into the designated field and save your changes by clicking the **SAVE** button.
    
-To simplify copying the contents of your public `KEY_FILENAME.pub` file, use the following command:
+>To simplify copying the contents of your public `KEY_FILENAME.pub` file, use the following command:
 
 ```bash
 cat ~/.ssh/KEY_FILENAME.pub | pbcopy
 ```
 
 
-To access your virtual machine, just run this command:
+>To access your virtual machine, just run this command:
 
 ```bash
 ssh -i ~/.ssh/KEY_FILENAME USERNAME@EXTERNAL_IP
@@ -191,7 +191,7 @@ make config
 
 Assuming you are using Linux AMD64 run the following commands to install Terraform - if you are using a different OS please choose the correct version here and exchange the download [link](https://developer.hashicorp.com/terraform/install#linux) and zip file name
 
->Run commnad to install packages
+>RUN commnad to install packages
 ```bash
 make install_pack
 ```
@@ -208,7 +208,7 @@ Log out and then log back in to have your group membership re-evaluated.
 
 ### Creating a Google Cloud Storage (GCS) bucket and a BigQuery dataset.
 
->To initiate, plan, and apply the necessary infrastructure, please execute the following Terraform commands, adjusting as needed. Please provide the ID of your project.
+>To initiate, plan and apply the necessary infrastructure, please execute the following Terraform commands, adjusting as needed. Please provide the ID of your project.
 ```bash
 cd ~/final_project/terraform/  && terraform init
 ```
@@ -411,7 +411,7 @@ cd ~/final_project && make build_run_docker
 ### Running pipeline
 
 
->To run the pipeline from web: 
+>RUN the pipeline from web: 
 
 1. Access the Mage AI web interface at http://localhost:6789/. 
 2. Click on the `pipeline_for_movies_tv_shows_datasets_from_kaggle` pipeline. 
@@ -428,10 +428,10 @@ cd ~/final_project && make build_run_docker
 
 ### Checking uploaded tables
 
-Go to BigQuery, open `movies_tv_shows_8c93fb215204` dataset
+Go to `BigQuery`, open `movies_tv_shows_8c93fb215204` dataset
 
 
-Connect Looker studio to BigQuery and perform visualizations.
+Connect `LookerStudio` to `BigQuery` and perform visualizations.
 
 <details>
 <summary>You should see this.</summary>
@@ -564,3 +564,36 @@ Destroy complete! Resources: 2 destroyed.
 ```bash
 cd ~/final_project && make teardown
 ```
+
+
+<details>
+<summary>You should see this.</summary>
+
+```bash
+[+] Running 3/3
+ ✔ Container final_project-magic-1     Removed                                                                                            10.4s
+ ✔ Container movies_tv_shows-postgres  Removed                                                                                             0.3s
+ ✔ Network final_project_default       Removed                                                                                             0.1s
+Untagged: postgres:14
+Untagged: postgres@sha256:6779d7a308f3c9c518a644ad9326be6149dc50352c91927725936a1115e09b0d
+Deleted: sha256:356048a31c4059a532aee010fcfef24fdaf3415c417f713a498a8ac256a171ac
+Deleted: sha256:ba442305ee10aebdfb1176c2ff302dfa77054849682e3e47c248c0a3b4758b4a
+Deleted: sha256:a360dee89d220ac7a580164f17b52bd13cabc9921fc96bed8aae8c1547f7e7fd
+Deleted: sha256:2e3b128bdc8e88cfcf1f21a0bd3880b9514d0b143ac47d14d98d8547b6fe9a39
+Deleted: sha256:c38cb31a7904527f76964eaf24c3f846722017f85de6849fa3efb05fe6716018
+Deleted: sha256:f2799c26b8912b2aa4ef9233ce92763a4e3a7496354000a2153b5229df9ef172
+Deleted: sha256:87954bc86af129cd12829866ad051299d149d8a7af056c81bc742cad70796ce5
+Deleted: sha256:69d375c5f90f1af9052c48d91153015c1218e818b7c1ddfc26efc8d914f199ea
+Deleted: sha256:f6c00f9786742d8673e0151a3f579ab7bc2e5a51ecbd270a64295ed8f0f3d2f5
+Deleted: sha256:09ddb139fb573c22b13d5a228f56786b16aaf84b5b18b7f59c47b501eb066bdc
+Deleted: sha256:49a085e9ea640ba4d209fcb3ea430748da2cfc5c875da0e50c2b5a653a6004e0
+Deleted: sha256:9089a35eed65c6258540ec217672b4aeddf29810d14e876025a7a9fb61ed7cb6
+Deleted: sha256:de288f7cc9566b3808a6691cf52e136d98683a4b1033ed1a54da01ec9445cf48
+Deleted: sha256:a74a8aa00f370c48738806be74d5195f6ef9187f97112c9b4e076ff076540fa1
+Deleted: sha256:a483da8ab3e941547542718cacd3258c6c705a63e94183c837c9bc44eb608999
+Untagged: mageai/mageai:latest
+Deleted: sha256:dd77b7a1e3340e168466892e622e949ccc29184bf1af2365b8a30963dba197c7
+```
+
+</details>
+</br>
