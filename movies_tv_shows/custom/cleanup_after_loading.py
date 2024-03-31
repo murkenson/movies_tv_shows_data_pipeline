@@ -15,6 +15,18 @@ def transform_custom(*args, **kwargs):
 
     Returns:
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
+import shutil
+from os import getenv
+
+
+if 'custom' not in globals():
+    from mage_ai.data_preparation.decorators import custom
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
+
+
+Markdown
+
     """
     BASE_DIR =  getenv("BASE_DIR_FOR_LOAD_DATA")
 

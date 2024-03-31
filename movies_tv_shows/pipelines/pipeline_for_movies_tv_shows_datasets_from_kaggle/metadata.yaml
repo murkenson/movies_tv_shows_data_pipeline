@@ -45,7 +45,7 @@ blocks:
       path: data_exporters/dynamic_exporter_to_gcs.py
     reduce_output: true
   downstream_blocks:
-  - staging_models
+  - dbt_build
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -61,38 +61,14 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration:
-    dbt: {}
+    dbt:
+      command: build
     dbt_profile_target: dev
     dbt_project_name: dbt/movies_tv_shows_dbt
     disable_query_preprocessing: false
     export_write_policy: append
     file_source:
-      path: dbts/staging_models.yaml
-    use_raw_sql: false
-  downstream_blocks:
-  - core_models
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: yaml
-  name: staging_models
-  retry_config: null
-  status: executed
-  timeout: null
-  type: dbt
-  upstream_blocks:
-  - dynamic_exporter_to_gcs
-  uuid: staging_models
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    dbt: {}
-    dbt_profile_target: ''
-    dbt_project_name: dbt/movies_tv_shows_dbt
-    disable_query_preprocessing: false
-    export_write_policy: append
-    file_source:
-      path: dbts/core_models.yaml
+      path: dbts/dbt_build.yaml
     use_raw_sql: false
   downstream_blocks:
   - cleanup_after_loading
@@ -100,17 +76,19 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: yaml
-  name: core_models
+  name: dbt_build
   retry_config: null
-  status: executed
+  status: not_executed
   timeout: null
   type: dbt
   upstream_blocks:
-  - staging_models
-  uuid: core_models
-- all_upstream_blocks_executed: true
-  color: pink
-  configuration: {}
+  - dynamic_exporter_to_gcs
+  uuid: dbt_build
+- all_upstream_blocks_executed: false
+  color: teal
+  configuration:
+    file_source:
+      path: custom/cleanup_after_loading.py
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
@@ -118,11 +96,11 @@ blocks:
   language: python
   name: cleanup_after_loading
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: custom
   upstream_blocks:
-  - core_models
+  - dbt_build
   uuid: cleanup_after_loading
 cache_block_output_in_memory: false
 callbacks: []
