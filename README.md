@@ -75,6 +75,11 @@ The selected technologies for this project include:
 > [!NOTE]
  For Partitioning, tables larger than 100 Gb are chosen, and for Clustering tables larger than 10 Gb are chosen. The reason for filtering out the smaller tables is because the optimization benefit is smaller and less predictable. Therefore, this project does not include these smaller tables, as the volume of data we have is relatively small. Here is the [source](https://cloud.google.com/blog/products/data-analytics/new-bigquery-partitioning-and-clustering-recommendations).
 
+
+A few words about how the pipeline operates in MAGE AI. Data is extracted from the `Kaggle` dataset and stored in the `data` directory on the server. It is then archived.
+In the following block, it is saved in `parquet` format and uploaded to `gcs`. External tables, staging, and core-level models are created within the `dbt` block. Upon successful completion of all higher-level processes, the `data` directory is successfully removed.
+In my case, I used [Dynamic Blocks](https://docs.mage.ai/design/blocks/dynamic-blocks) to take the output of one block and dynamically create more blocks using that information.
+
 ## Data Source
 
 Dataset was taken from Kaggle:
