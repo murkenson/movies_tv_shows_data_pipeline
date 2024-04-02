@@ -428,15 +428,32 @@ cd ~/final_project && make build_run_docker
 
 ### Checking uploaded tables
 
-Go to `BigQuery`, open `movies_tv_shows_8c93fb215204` dataset
-
-
-Connect `LookerStudio` to `BigQuery` and perform visualizations.
+Go to BigQuery, open the `movies_tv_shows_8c93fb215204` dataset.
 
 <details>
 <summary>You should see this.</summary>
 
 ![BigQuery](/recreate_project/static/070_bigquery_tables.png)
+
+</details>
+</br>
+
+
+### Replicating dashboard
+
+To replicate the dashboard, please follow these steps:
+
+ 1. Go to the dashboard's [URL](https://lookerstudio.google.com/reporting/7ef1cb87-8bd6-4b62-8946-3ea0e79a7ea6). 
+ 
+ 2. Click on the `More Options` icon in the top-right corner of the screen. 
+ 
+ 3. Select `Make a Copy` from the menu that appears.
+
+
+<details>
+<summary>You should see this.</summary>
+
+![BigQuery](/recreate_project/static/062_lookerstudio_report.png)
 
 </details>
 </br>
