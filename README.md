@@ -50,7 +50,11 @@ I will be focusing my analysis on these platforms:
 
 ## Dashboard
 
+> [!NOTE]
 You can view the dashboard [here](https://lookerstudio.google.com/reporting/7ef1cb87-8bd6-4b62-8946-3ea0e79a7ea6).
+
+
+After completing the course, I have deleted all the data, so there is nothing left on the dashboard.
 
 ![](/recreate_project/static/060_lookerstudio_report.gif)
 
