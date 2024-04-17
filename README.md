@@ -120,3 +120,13 @@ A special thank you to the **instructors**, who have provided guidance and suppo
 - [Michael Shoemaker](https://www.linkedin.com/in/michaelshoemaker1/)
 
 Thank you for organizing such a comprehensive and interesting course experience! 🙏
+
+
+
+## Feedback:
+
+>The feedbacks that was received after the verification process on the course
+
+- Looks nice!
+- The benefit of choosing a large dataset is that partitioning and clustering actually makes sense, you are the only person I evaluated that actually did this step! The steps to reproduce are clear, and the tiles are beautiful. It would be nice if you included more information on the steps you took, ie, information on data transformation with dbt, maybe a screenshot of your DAG, etc.
+- Good command of python and detailedly and logically segregated scripts. Seems to not have up-to-date data to be fetched regularly via batch? Would be cool to have that!
